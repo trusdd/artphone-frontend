@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Категории - ArtPhone</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="header">
+      <nav class="main-nav">
+        <div class="nav-container">
+          <a href="index.html" class="logo">ArtPhone</a>
+          <button class="burger-menu" id="burgerMenu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          <ul class="nav-menu">
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="categories.html" class="active">Каталог</a></li>
+            <li><a href="contacts.html">Контакты</a></li>
+            <li><a href="login.html" id="loginLink">Вход</a></li>
+            <li><a href="profile.html" id="profileLink" style="display: none;">Личный кабинет</a></li>
+          </ul>
+          <div class="search-container">
+            <input type="text" id="searchInput" class="search-input" placeholder="Поиск..." />
+            <div id="searchResults" class="search-results"></div>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <div class="categories-page">
+      <h1>Категории товаров</h1>
+      
+      <div class="breadcrumbs">
+        <a href="index.html">Главная</a> / <span>Категории</span>
+      </div>
+
+      <div class="categories-grid">
+        <a href="catalog-iphone.html" class="category-card">
+          <div class="category-icon">📱</div>
+          <h2>iPhone</h2>
+          <p>Смартфоны Apple</p>
+          <span class="category-count">14 моделей</span>
+        </a>
+
+        <a href="catalog-mac.html" class="category-card">
+          <div class="category-icon">💻</div>
+          <h2>Mac</h2>
+          <p>Ноутбуки и компьютеры</p>
+          <span class="category-count">6 моделей</span>
+        </a>
+
+        <a href="catalog-ipad.html" class="category-card">
+          <div class="category-icon">📟</div>
+          <h2>iPad</h2>
+          <p>Планшеты</p>
+          <span class="category-count">3 модели</span>
+        </a>
+
+        <a href="catalog-airpods.html" class="category-card">
+          <div class="category-icon">🎧</div>
+          <h2>AirPods</h2>
+          <p>Наушники</p>
+          <span class="category-count">5 моделей</span>
+        </a>
+
+        <a href="catalog-watch.html" class="category-card">
+          <div class="category-icon">⌚</div>
+          <h2>Apple Watch</h2>
+          <p>Умные часы</p>
+          <span class="category-count">6 моделей</span>
+        </a>
+      </div>
+
+      <div class="promo-banner">
+        <h3>Нужна помощь с выбором?</h3>
+        <p>Наши консультанты помогут подобрать идеальное устройство</p>
+        <a href="contacts.html" class="btn btn-primary">Связаться с нами</a>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-info">
+            <h3>ArtPhone</h3>
+            <p>Официальный магазин iPhone в России</p>
+            <p>г. Москва, ул. Тверская, д. 25</p>
+          </div>
+          <div class="footer-links">
+            <h4>Меню</h4>
+            <ul>
+              <li><a href="index.html">Главная</a></li>
+              <li><a href="categories.html">Каталог</a></li>
+              <li><a href="contacts.html">Контакты</a></li>
+            </ul>
+          </div>
+          <div class="footer-contact">
+            <h4>Контакты</h4>
+            <p>+7 (495) 123-45-67</p>
+            <p>info@artphone.ru</p>
+            <p>Пн-Вс: 10:00 - 21:00</p>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2023 Магазин iPhone "ArtPhone". Все права защищены</p>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

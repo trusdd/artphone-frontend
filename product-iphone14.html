@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iPhone 14 - ArtPhone</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header">
+        <nav class="main-nav">
+            <div class="nav-container">
+                <a href="index.html" class="logo">ArtPhone</a>
+                <button class="burger-menu" id="burgerMenu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="categories.html">Каталог</a></li>
+                    <li><a href="contacts.html">Контакты</a></li>
+                    <li><a href="login.html" id="loginLink">Вход</a></li>
+                    <li><a href="profile.html" id="profileLink" style="display: none;">Личный кабинет</a></li>
+                </ul>
+                <div class="search-container">
+                    <input type="text" id="searchInput" class="search-input" placeholder="Поиск iPhone...">
+                    <div id="searchResults" class="search-results"></div>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <div class="product-container">
+        <div class="breadcrumbs">
+            <a href="index.html">Главная</a> / <a href="categories.html">Каталог</a> / <a href="catalog-iphone.html">iPhone</a> / <span>iPhone 14</span>
+        </div>
+
+        <h1>iPhone 14</h1>
+
+        <div class="product-image">
+            <a href="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-14-finish-select-202209-6-7inch?wid=5120&hei=2880&fmt=p-jpg" target="_blank">
+                <img src="img/iPhone_14.jpg" alt="iPhone 14" width="300">
+                <p class="image-hint">Нажмите на изображение для просмотра в полном размере</p>
+            </a>
+        </div>
+
+        <div class="product-rating">
+            <div>★★★★☆ 4.6/5</div>
+            <div class="price">69 990 ₽</div>
+        </div>
+
+        <div class="product-info">
+            <h3>Описание товара</h3>
+            <p>iPhone 14 — надежный смартфон с отличной камерой, чипом A15 Bionic и улучшенной автономностью.</p>
+
+            <h3>Характеристики товара</h3>
+            <ul>
+                <li>Процессор: Apple A15 Bionic</li>
+                <li>Дисплей: 6.1" Super Retina XDR</li>
+                <li>Память: 128 ГБ / 256 ГБ</li>
+                <li>Основная камера: 12 МП + 12 МП</li>
+                <li>Фронтальная камера: 12 МП</li>
+                <li>Аккумулятор: до 20 часов видео</li>
+                <li>Материал корпуса: алюминий</li>
+                <li>Защита: Ceramic Shield</li>
+                <li>Водонепроницаемость: IP68</li>
+                <li>Вес: 172 г</li>
+                <li>Цвета: черный, белый, синий, красный</li>
+                <li>Гарантия: 24 месяца</li>
+                <li>Операционная система: iOS 16</li>
+            </ul>
+
+            <h3>Технические характеристики</h3>
+            <table class="tech-table">
+                <tr>
+                    <th>Характеристика</th>
+                    <th>Значение</th>
+                    <th>Описание</th>
+                </tr>
+                <tr>
+                    <td>Процессор</td>
+                    <td>Apple A15 Bionic</td>
+                    <td>6-ядерный, 3.2 ГГц</td>
+                </tr>
+                <tr>
+                    <td>Дисплей</td>
+                    <td>6.1" Super Retina XDR</td>
+                    <td>OLED, 60 Гц</td>
+                </tr>
+                <tr>
+                    <td>Память</td>
+                    <td>128 ГБ</td>
+                    <td>NVMe, LPDDR4X</td>
+                </tr>
+            </table>
+
+            <h3>Подробное описание товара</h3>
+            <p>iPhone 14 предлагает проверенные технологии по доступной цене. Улучшенная камера с Photonic Engine обеспечивает отличные снимки при слабом освещении.</p>
+            <p>Чип A15 Bionic с 5-ядерным GPU обеспечивает высокую производительность для игр и приложений. Экстренная связь через спутник может помочь в критических ситуациях.</p>
+            <p>Это отличный выбор для тех, кто ищет надежный iPhone с отличной камерой.</p>
+
+            <div style="text-align: center; margin-top: 30px;">
+                <button class="buy-button" data-product='{"id":"iphone14","name":"iPhone 14","price":"69 990 ₽","image":"https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-14-finish-select-202209-6-7inch?wid=5120&hei=2880&fmt=p-jpg"}'>Купить сейчас</button>
+                <button class="add-to-cart" data-product='{"id":"iphone14","name":"iPhone 14","price":"69 990 ₽","image":"https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-14-finish-select-202209-6-7inch?wid=5120&hei=2880&fmt=p-jpg"}'>Добавить в корзину</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>ArtPhone</h3>
+                    <p>Официальный магазин iPhone в России</p>
+                    <p>г. Москва, ул. Тверская, д. 25</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Меню</h4>
+                    <ul>
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="categories.html">Каталог</a></li>
+                        <li><a href="contacts.html">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Контакты</h4>
+                    <p>+7 (495) 123-45-67</p>
+                    <p>info@artphone.ru</p>
+                    <p>Пн-Вс: 10:00 - 21:00</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Магазин iPhone "ArtPhone". Все права защищены</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

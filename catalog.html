@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Интернет-магазин iPhone "ArtPhone" - Каталог</title>
+    <title>iPhone - ArtPhone</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -11,121 +11,100 @@
       <nav class="main-nav">
         <div class="nav-container">
           <a href="index.html" class="logo">ArtPhone</a>
+          <button class="burger-menu" id="burgerMenu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
           <ul class="nav-menu">
             <li><a href="index.html">Главная</a></li>
-            <li><a href="catalog.html" class="active">Каталог</a></li>
+            <li><a href="categories.html">Каталог</a></li>
             <li><a href="contacts.html">Контакты</a></li>
             <li><a href="login.html" id="loginLink">Вход</a></li>
-            <li>
-              <a href="profile.html" id="profileLink" style="display: none"
-                >Личный кабинет</a
-              >
-            </li>
+            <li><a href="profile.html" id="profileLink" style="display: none;">Личный кабинет</a></li>
           </ul>
           <div class="search-container">
-            <input
-              type="text"
-              id="searchInput"
-              class="search-input"
-              placeholder="Поиск iPhone..."
-            />
+            <input type="text" id="searchInput" class="search-input" placeholder="Поиск iPhone..." />
             <div id="searchResults" class="search-results"></div>
           </div>
         </div>
       </nav>
     </div>
 
-    <div class="catalog">
-      <h1>Каталог iPhone</h1>
-      <div class="catalog-grid">
-        <div
-          class="catalog-item"
-          data-name="iPhone 17"
-          data-price="129990"
-          data-rating="4.9"
-        >
-          <a href="product-iphone17.html">
-            <img
-              src="https://resizer.mail.ru/p/73978d8a-5f93-5634-bdf9-01d76ca5589f/AQAKbFx8-a7PInIUF9LlnEZ2rU8B457mnO8qT2ZjKO0-xTNW6Iz6_iDA2ikvDQYScy-TRFu4k7B5F46i29vbekqvHkU.jpg"
-              alt="iPhone 17"
-            />
-            <h3>iPhone 17</h3>
-            <p>129 990 ₽</p>
-            <div class="rating">★★★★★ 4.9/5</div>
-          </a>
-          <button
-            class="btn btn-secondary add-to-cart"
-            data-product='{"id":"iphone17","name":"iPhone 17","price":"129 990 ₽","image":"https://resizer.mail.ru/p/73978d8a-5f93-5634-bdf9-01d76ca5589f/AQAKbFx8-a7PInIUF9LlnEZ2rU8B457mnO8qT2ZjKO0-xTNW6Iz6_iDA2ikvDQYScy-TRFu4k7B5F46i29vbekqvHkU.jpg"}'
-          >
-            В корзину
-          </button>
+    <div class="catalog-page">
+      <h1>iPhone</h1>
+      
+      <div class="breadcrumbs">
+        <a href="index.html">Главная</a> / <a href="categories.html">Каталог</a> / <span>iPhone</span>
+      </div>
+      
+      <div class="catalog-controls">
+        <button class="filter-toggle" id="filterToggle">⚙️ Фильтры</button>
+        
+        <div class="filters" id="filters">
+          <div class="filters-header">
+            <h3>Фильтры</h3>
+            <button class="close-filters" id="closeFilters">✕</button>
+          </div>
+          
+          <div class="filter-group">
+            <label>Цена</label>
+            <div class="price-range">
+              <input type="range" id="priceFilter" min="0" max="200000" value="200000" step="1000">
+              <div class="price-values">
+                <span>0 ₽</span>
+                <span id="priceValue">200 000 ₽</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="filter-group">
+            <label>Модель</label>
+            <select id="modelFilter">
+              <option value="">Все модели</option>
+              <option value="iPhone 17">iPhone 17</option>
+              <option value="iPhone 17 Pro">iPhone 17 Pro</option>
+              <option value="iPhone 16">iPhone 16</option>
+              <option value="iPhone 16 Pro">iPhone 16 Pro</option>
+              <option value="iPhone 15">iPhone 15</option>
+              <option value="iPhone 15 Pro">iPhone 15 Pro</option>
+              <option value="iPhone SE">iPhone SE</option>
+            </select>
+          </div>
+          
+          <div class="filter-group">
+            <label>Память</label>
+            <select id="storageFilter">
+              <option value="">Вся</option>
+              <option value="64">64 ГБ</option>
+              <option value="128">128 ГБ</option>
+              <option value="256">256 ГБ</option>
+              <option value="512">512 ГБ</option>
+            </select>
+          </div>
+          
+          <div class="filter-group">
+            <label>Рейтинг</label>
+            <select id="ratingFilter">
+              <option value="">Любой</option>
+              <option value="4.5">от 4.5 ★</option>
+              <option value="4.7">от 4.7 ★</option>
+              <option value="4.8">от 4.8 ★</option>
+              <option value="4.9">от 4.9 ★</option>
+            </select>
+          </div>
+          
+          <div class="filter-actions">
+            <button class="btn btn-primary" id="applyFilters">Применить</button>
+            <button class="btn btn-outline" id="resetFilters">Сбросить</button>
+          </div>
         </div>
-        <div
-          class="catalog-item"
-          data-name="iPhone 17 Pro"
-          data-price="159990"
-          data-rating="4.9"
-        >
-          <a href="product-iphone17pro.html">
-            <img
-              src="https://twigo.ru/center/iblock/5f9/6m2fcxghq6ilra6xnq5ftx32721ii1or/ifdx9jprifkl2ldfzmn2m18n91wg8mim.jpg"
-              alt="iPhone 17 Pro"
-            />
-            <h3>iPhone 17 Pro</h3>
-            <p>159 990 ₽</p>
-            <div class="rating">★★★★★ 4.9/5</div>
-          </a>
-          <button
-            class="btn btn-secondary add-to-cart"
-            data-product='{"id":"iphone17pro","name":"iPhone 17 Pro","price":"159 990 ₽","image":"https://twigo.ru/center/iblock/5f9/6m2fcxghq6ilra6xnq5ftx32721ii1or/ifdx9jprifkl2ldfzmn2m18n91wg8mim.jpg"}'
-          >
-            В корзину
-          </button>
-        </div>
-        <div
-          class="catalog-item"
-          data-name="iPhone 16"
-          data-price="99990"
-          data-rating="4.8"
-        >
-          <a href="product-iphone16.html">
-            <img
-              src="https://tatphone.ru/wp-content/uploads/2025/06/13367471-8.jpg"
-              alt="iPhone 16"
-            />
-            <h3>iPhone 16</h3>
-            <p>99 990 ₽</p>
-            <div class="rating">★★★★☆ 4.8/5</div>
-          </a>
-          <button
-            class="btn btn-secondary add-to-cart"
-            data-product='{"id":"iphone16","name":"iPhone 16","price":"99 990 ₽","image":"https://tatphone.ru/wp-content/uploads/2025/06/13367471-8.jpg"}'
-          >
-            В корзину
-          </button>
-        </div>
-        <div
-          class="catalog-item"
-          data-name="iPhone 16 Pro"
-          data-price="139990"
-          data-rating="4.9"
-        >
-          <a href="product-iphone16pro.html">
-            <img
-              src="https://cdn.mos.cms.futurecdn.net/BUjnMt43qGRgpsaBo2nvcC.jpg"
-              alt="iPhone 16 Pro"
-            />
-            <h3>iPhone 16 Pro</h3>
-            <p>139 990 ₽</p>
-            <div class="rating">★★★★★ 4.9/5</div>
-          </a>
-          <button
-            class="btn btn-secondary add-to-cart"
-            data-product='{"id":"iphone16pro","name":"iPhone 16 Pro","price":"139 990 ₽","image":"https://applegod.ru/upload/iblock/876/y4mxa4utp7mj9ujt3x55jk4x1iq8wbf4.jpeg"}'
-          >
-            В корзину
-          </button>
-        </div>
+      </div>
+
+      <div class="catalog-grid" id="catalogGrid"></div>
+      
+      <div class="back-to-categories">
+        <a href="categories.html" class="btn btn-outline">← Вернуться к категориям</a>
       </div>
     </div>
 
@@ -141,7 +120,7 @@
             <h4>Меню</h4>
             <ul>
               <li><a href="index.html">Главная</a></li>
-              <li><a href="catalog.html">Каталог</a></li>
+              <li><a href="categories.html">Каталог</a></li>
               <li><a href="contacts.html">Контакты</a></li>
             </ul>
           </div>
@@ -159,5 +138,103 @@
     </div>
 
     <script src="script.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const filterToggle = document.getElementById('filterToggle');
+        const filters = document.getElementById('filters');
+        const closeFilters = document.getElementById('closeFilters');
+        const priceFilter = document.getElementById('priceFilter');
+        const priceValue = document.getElementById('priceValue');
+        const modelFilter = document.getElementById('modelFilter');
+        const storageFilter = document.getElementById('storageFilter');
+        const ratingFilter = document.getElementById('ratingFilter');
+        const applyFilters = document.getElementById('applyFilters');
+        const resetFilters = document.getElementById('resetFilters');
+        const catalogGrid = document.getElementById('catalogGrid');
+        
+        const iphoneProducts = window.catalogProducts.filter(p => p.category === 'iphone');
+        
+        function renderProducts(products) {
+          const wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
+          
+          catalogGrid.innerHTML = products.map(product => `
+            <div class="catalog-item" data-id="${product.id}" data-price="${product.priceNum}" data-rating="${product.rating}" data-storage="${product.storage || 0}">
+              <a href="${product.link}">
+                <img src="${product.image}" alt="${product.name}" loading="lazy">
+                <h3>${product.name}</h3>
+                <p>${product.price}</p>
+                <div class="rating">${'★'.repeat(Math.floor(product.rating))}${product.rating % 1 ? '½' : ''} ${product.rating}/5</div>
+                ${product.storage ? `<div class="storage">${product.storage} ГБ</div>` : ''}
+              </a>
+              <div class="product-actions">
+                <button class="btn btn-secondary add-to-cart" data-product='${JSON.stringify(product).replace(/'/g, "&apos;")}'>
+                  В корзину
+                </button>
+                <button class="wishlist-btn ${wishlist.includes(product.id) ? 'active' : ''}" data-product-id="${product.id}">
+                  ❤️
+                </button>
+              </div>
+            </div>
+          `).join('');
+        }
+        
+        renderProducts(iphoneProducts);
+        
+        if (filterToggle && filters) {
+          filterToggle.addEventListener('click', () => {
+            filters.classList.add('active');
+          });
+        }
+        
+        if (closeFilters && filters) {
+          closeFilters.addEventListener('click', () => {
+            filters.classList.remove('active');
+          });
+        }
+        
+        if (priceFilter && priceValue) {
+          priceFilter.addEventListener('input', function() {
+            priceValue.textContent = Number(this.value).toLocaleString() + ' ₽';
+          });
+        }
+        
+        if (applyFilters) {
+          applyFilters.addEventListener('click', () => {
+            const maxPrice = parseInt(priceFilter?.value || 200000);
+            const model = modelFilter?.value || '';
+            const storage = storageFilter?.value || '';
+            const minRating = parseFloat(ratingFilter?.value || 0);
+            
+            let filtered = iphoneProducts.filter(product => {
+              if (product.priceNum > maxPrice) return false;
+              if (model && !product.name.includes(model)) return false;
+              if (storage && product.storage != storage) return false;
+              if (minRating && product.rating < minRating) return false;
+              return true;
+            });
+            
+            renderProducts(filtered);
+            
+            if (window.innerWidth <= 768) {
+              filters.classList.remove('active');
+            }
+          });
+        }
+        
+        if (resetFilters) {
+          resetFilters.addEventListener('click', () => {
+            if (priceFilter) {
+              priceFilter.value = '200000';
+              priceValue.textContent = '200 000 ₽';
+            }
+            if (modelFilter) modelFilter.value = '';
+            if (storageFilter) storageFilter.value = '';
+            if (ratingFilter) ratingFilter.value = '';
+            
+            renderProducts(iphoneProducts);
+          });
+        }
+      });
+    </script>
   </body>
 </html>

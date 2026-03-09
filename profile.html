@@ -11,24 +11,20 @@
       <nav class="main-nav">
         <div class="nav-container">
           <a href="index.html" class="logo">ArtPhone</a>
+          <button class="burger-menu" id="burgerMenu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
           <ul class="nav-menu">
-            <li>
-              <a href="profile.html" id="profileLink" style="display: none"
-                >Личный кабинет</a
-              >
-            </li>
-            <li><a href="login.html" id="loginLink">Вход</a></li>
             <li><a href="index.html">Главная</a></li>
             <li><a href="catalog.html">Каталог</a></li>
             <li><a href="contacts.html">Контакты</a></li>
+            <li><a href="login.html" id="loginLink" style="display: none;">Вход</a></li>
+            <li><a href="profile.html" id="profileLink">Личный кабинет</a></li>
           </ul>
           <div class="search-container">
-            <input
-              type="text"
-              id="searchInput"
-              class="search-input"
-              placeholder="Поиск iPhone..."
-            />
+            <input type="text" id="searchInput" class="search-input" placeholder="Поиск iPhone..." />
             <div id="searchResults" class="search-results"></div>
           </div>
         </div>
@@ -63,10 +59,7 @@
               </div>
               <div class="order-items">
                 <div class="order-item">
-                  <img
-                    src="https://twigo.ru/center/iblock/5f9/6m2fcxghq6ilra6xnq5ftx32721ii1or/ifdx9jprifkl2ldfzmn2m18n91wg8mim.jpg"
-                    alt="iPhone 17 Pro"
-                  />
+                  <img src="https://twigo.ru/center/iblock/5f9/6m2fcxghq6ilra6xnq5ftx32721ii1or/ifdx9jprifkl2ldfzmn2m18n91wg8mim.jpg" alt="iPhone 17 Pro" loading="lazy" />
                   <div class="order-item-info">
                     <h4>iPhone 17 Pro</h4>
                     <p>Количество: 1</p>
@@ -88,10 +81,7 @@
               </div>
               <div class="order-items">
                 <div class="order-item">
-                  <img
-                    src="https://tatphone.ru/wp-content/uploads/2025/06/13367471-8.jpg"
-                    alt="iPhone 16"
-                  />
+                  <img src="https://tatphone.ru/wp-content/uploads/2025/06/13367471-8.jpg" alt="iPhone 16" loading="lazy" />
                   <div class="order-item-info">
                     <h4>iPhone 16</h4>
                     <p>Количество: 1</p>
@@ -116,23 +106,13 @@
             </div>
             <div class="form-group">
               <label for="profileEmailInput">Email</label>
-              <input
-                type="email"
-                id="profileEmailInput"
-                value="ivan@email.com"
-              />
+              <input type="email" id="profileEmailInput" value="ivan@email.com" />
             </div>
             <div class="form-group">
               <label for="profilePhoneInput">Телефон</label>
-              <input
-                type="tel"
-                id="profilePhoneInput"
-                value="+7 (999) 123-45-67"
-              />
+              <input type="tel" id="profilePhoneInput" value="+7 (999) 123-45-67" />
             </div>
-            <button type="submit" class="btn btn-primary">
-              Сохранить изменения
-            </button>
+            <button type="submit" class="btn btn-primary">Сохранить изменения</button>
           </form>
 
           <h3>Смена пароля</h3>
@@ -149,9 +129,7 @@
               <label for="confirmNewPassword">Подтверждение пароля</label>
               <input type="password" id="confirmNewPassword" />
             </div>
-            <button type="submit" class="btn btn-primary">
-              Изменить пароль
-            </button>
+            <button type="submit" class="btn btn-primary">Изменить пароль</button>
           </form>
         </div>
 
@@ -183,42 +161,24 @@
               </div>
             </div>
           </div>
-          <button class="btn btn-primary" id="addAddressBtn">
-            + Добавить новый адрес
-          </button>
+          <button class="btn btn-primary" id="addAddressBtn">+ Добавить новый адрес</button>
         </div>
 
         <div class="profile-tab" id="wishlistTab">
           <h2>Избранное</h2>
           <div class="wishlist-grid" id="wishlistGrid">
             <div class="wishlist-item">
-              <img
-                src="https://twigo.ru/center/iblock/5f9/6m2fcxghq6ilra6xnq5ftx32721ii1or/ifdx9jprifkl2ldfzmn2m18n91wg8mim.jpg"
-                alt="iPhone 17 Pro"
-              />
+              <img src="https://twigo.ru/center/iblock/5f9/6m2fcxghq6ilra6xnq5ftx32721ii1or/ifdx9jprifkl2ldfzmn2m18n91wg8mim.jpg" alt="iPhone 17 Pro" loading="lazy" />
               <h4>iPhone 17 Pro</h4>
               <p class="price">159 990 ₽</p>
-              <button
-                class="btn btn-primary add-to-cart"
-                data-product='{"id":"iphone17pro","name":"iPhone 17 Pro","price":"159 990 ₽","image":"https://twigo.ru/center/iblock/5f9/6m2fcxghq6ilra6xnq5ftx32721ii1or/ifdx9jprifkl2ldfzmn2m18n91wg8mim.jpg"}'
-              >
-                В корзину
-              </button>
+              <button class="btn btn-primary add-to-cart" data-product='{"id":"iphone17pro","name":"iPhone 17 Pro","price":"159 990 ₽","image":"https://twigo.ru/center/iblock/5f9/6m2fcxghq6ilra6xnq5ftx32721ii1or/ifdx9jprifkl2ldfzmn2m18n91wg8mim.jpg"}'>В корзину</button>
               <button class="wishlist-remove">×</button>
             </div>
             <div class="wishlist-item">
-              <img
-                src="https://tatphone.ru/wp-content/uploads/2025/06/13367471-8.jpg"
-                alt="iPhone 16"
-              />
+              <img src="https://tatphone.ru/wp-content/uploads/2025/06/13367471-8.jpg" alt="iPhone 16" loading="lazy" />
               <h4>iPhone 16</h4>
               <p class="price">99 990 ₽</p>
-              <button
-                class="btn btn-primary add-to-cart"
-                data-product='{"id":"iphone16","name":"iPhone 16","price":"99 990 ₽","image":"https://tatphone.ru/wp-content/uploads/2025/06/13367471-8.jpg"}'
-              >
-                В корзину
-              </button>
+              <button class="btn btn-primary add-to-cart" data-product='{"id":"iphone16","name":"iPhone 16","price":"99 990 ₽","image":"https://tatphone.ru/wp-content/uploads/2025/06/13367471-8.jpg"}'>В корзину</button>
               <button class="wishlist-remove">×</button>
             </div>
           </div>

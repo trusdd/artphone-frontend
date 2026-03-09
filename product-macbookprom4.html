@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MacBook Pro M4 - ArtPhone</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header">
+        <nav class="main-nav">
+            <div class="nav-container">
+                <a href="index.html" class="logo">ArtPhone</a>
+                <button class="burger-menu" id="burgerMenu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="categories.html">Каталог</a></li>
+                    <li><a href="contacts.html">Контакты</a></li>
+                    <li><a href="login.html" id="loginLink">Вход</a></li>
+                    <li><a href="profile.html" id="profileLink" style="display: none;">Личный кабинет</a></li>
+                </ul>
+                <div class="search-container">
+                    <input type="text" id="searchInput" class="search-input" placeholder="Поиск Mac...">
+                    <div id="searchResults" class="search-results"></div>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <div class="product-container">
+        <div class="breadcrumbs">
+            <a href="index.html">Главная</a> / <a href="categories.html">Каталог</a> / <a href="catalog-mac.html">Mac</a> / <span>MacBook Pro M4</span>
+        </div>
+
+        <h1>MacBook Pro M4</h1>
+
+        <div class="product-image">
+            <a href="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/mbp14-spaceblack-select-202410?wid=5120&hei=2880&fmt=p-jpg" target="_blank">
+                <img src="img/MacBookPro_M4.jpg" alt="MacBook Pro M4" width="300">
+                <p class="image-hint">Нажмите на изображение для просмотра в полном размере</p>
+            </a>
+        </div>
+
+        <div class="product-rating">
+            <div>★★★★★ 4.9/5</div>
+            <div class="price">229 990 ₽</div>
+        </div>
+
+        <div class="product-info">
+            <h3>Описание товара</h3>
+            <p>MacBook Pro M4 — новейший профессиональный ноутбук с чипом M4, улучшенным дисплеем и поддержкой Apple Intelligence.</p>
+
+            <h3>Характеристики товара</h3>
+            <ul>
+                <li>Процессор: Apple M4 Pro / M4 Max</li>
+                <li>Дисплей: 14.2" или 16.2" Liquid Retina XDR</li>
+                <li>Память: 18 ГБ / 36 ГБ / 48 ГБ / 64 ГБ / 128 ГБ</li>
+                <li>Накопитель: 512 ГБ / 1 ТБ / 2 ТБ / 4 ТБ / 8 ТБ</li>
+                <li>Аккумулятор: до 24 часов</li>
+                <li>Вес: от 1.62 кг</li>
+                <li>Цвета: космический черный, серебристый</li>
+                <li>Гарантия: 24 месяца</li>
+                <li>Операционная система: macOS</li>
+            </ul>
+
+            <h3>Технические характеристики</h3>
+            <table class="tech-table">
+                <tr>
+                    <th>Характеристика</th>
+                    <th>Значение</th>
+                    <th>Описание</th>
+                </tr>
+                <tr>
+                    <td>Процессор</td>
+                    <td>Apple M4 Pro</td>
+                    <td>14 ядер</td>
+                </tr>
+                <tr>
+                    <td>Дисплей</td>
+                    <td>14.2" Liquid Retina XDR</td>
+                    <td>3024x1964, 1000 нит, ProMotion</td>
+                </tr>
+                <tr>
+                    <td>Память</td>
+                    <td>18 ГБ</td>
+                    <td>Объединяемая память</td>
+                </tr>
+            </table>
+
+            <h3>Подробное описание товара</h3>
+            <p>MacBook Pro M4 представляет новую эру профессиональных вычислений. Чипы M4 Pro и M4 Max обеспечивают революционную производительность для самых требовательных задач.</p>
+            <p>Улучшенный дисплей с пиковой яркостью 1600 нит для HDR-контента делает работу с видео еще более впечатляющей. Новый цвет "Космический черный" имеет специальное покрытие, устойчивое к отпечаткам пальцев.</p>
+            <p>Поддержка Apple Intelligence открывает новые возможности для работы с искусственным интеллектом прямо на устройстве.</p>
+
+            <div style="text-align: center; margin-top: 30px;">
+                <button class="buy-button" data-product='{"id":"macbookprom4","name":"MacBook Pro M4","price":"229 990 ₽","image":"https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/mbp14-spaceblack-select-202410?wid=5120&hei=2880&fmt=p-jpg"}'>Купить сейчас</button>
+                <button class="add-to-cart" data-product='{"id":"macbookprom4","name":"MacBook Pro M4","price":"229 990 ₽","image":"https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/mbp14-spaceblack-select-202410?wid=5120&hei=2880&fmt=p-jpg"}'>Добавить в корзину</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>ArtPhone</h3>
+                    <p>Официальный магазин iPhone в России</p>
+                    <p>г. Москва, ул. Тверская, д. 25</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Меню</h4>
+                    <ul>
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="categories.html">Каталог</a></li>
+                        <li><a href="contacts.html">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Контакты</h4>
+                    <p>+7 (495) 123-45-67</p>
+                    <p>info@artphone.ru</p>
+                    <p>Пн-Вс: 10:00 - 21:00</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Магазин iPhone "ArtPhone". Все права защищены</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

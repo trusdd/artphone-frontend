@@ -11,9 +11,14 @@
         <nav class="main-nav">
             <div class="nav-container">
                 <a href="index.html" class="logo">ArtPhone</a>
+                <button class="burger-menu" id="burgerMenu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
                 <ul class="nav-menu">
                     <li><a href="index.html" class="active">Главная</a></li>
-                    <li><a href="catalog.html">Каталог</a></li>
+                    <li><a href="categories.html">Каталог</a></li>
                     <li><a href="contacts.html">Контакты</a></li>
                     <li><a href="login.html" id="loginLink">Вход</a></li>
                     <li><a href="profile.html" id="profileLink" style="display: none;">Личный кабинет</a></li>
@@ -30,7 +35,7 @@
         <div class="hero-content">
             <h1>iPhone для тех, кто ценит совершенство</h1>
             <p>Официальный дилер Apple в России с 2010 года</p>
-            <a href="catalog.html" class="btn btn-primary">Выбрать iPhone</a>
+            <a href="categories.html" class="btn btn-primary">Выбрать iPhone</a>
         </div>
     </header>
 
@@ -51,7 +56,7 @@
                     <div class="slide-content">
                         <h3>Trade-in</h3>
                         <p>Скидка до 50% при обмене</p>
-                        <a href="catalog.html" class="btn btn-primary">Узнать больше</a>
+                        <a href="categories.html" class="btn btn-primary">Узнать больше</a>
                     </div>
                 </div>
                 <div class="slide">
@@ -59,7 +64,7 @@
                     <div class="slide-content">
                         <h3>Рассрочка 0%</h3>
                         <p>На все модели iPhone</p>
-                        <a href="catalog.html" class="btn btn-primary">Выбрать</a>
+                        <a href="categories.html" class="btn btn-primary">Выбрать</a>
                     </div>
                 </div>
             </div>
@@ -97,7 +102,7 @@
                     </div>
                 </div>
                 <div class="about-image">
-                    <img src="https://images.unsplash.com/photo-1556656793-08538906a9f8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Магазин ArtPhone">
+                    <img src="https://images.unsplash.com/photo-1556656793-08538906a9f8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Магазин ArtPhone" loading="lazy">
                 </div>
             </div>
         </div>
@@ -136,38 +141,38 @@
             <h2 class="section-title">Хиты продаж</h2>
             <div class="products-grid">
                 <div class="product-card">
-                    <img src="https://resizer.mail.ru/p/73978d8a-5f93-5634-bdf9-01d76ca5589f/AQAKbFx8-a7PInIUF9LlnEZ2rU8B457mnO8qT2ZjKO0-xTNW6Iz6_iDA2ikvDQYScy-TRFu4k7B5F46i29vbekqvHkU.jpg" alt="iPhone 17">
-                    <div class="product-info">
-                        <h3>iPhone 17</h3>
-                        <div class="rating">★★★★★ 4.9/5</div>
-                        <div class="price">129 990 ₽</div>
-                        <p class="product-desc">Базовый флагман нового поколения с инновационными технологиями</p>
-                        <button class="btn btn-secondary add-to-cart" data-product='{"id":"iphone17","name":"iPhone 17","price":"129 990 ₽","image":"https://resizer.mail.ru/p/73978d8a-5f93-5634-bdf9-01d76ca5589f/AQAKbFx8-a7PInIUF9LlnEZ2rU8B457mnO8qT2ZjKO0-xTNW6Iz6_iDA2ikvDQYScy-TRFu4k7B5F46i29vbekqvHkU.jpg"}'>В корзину</button>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <img src="https://twigo.ru/center/iblock/5f9/6m2fcxghq6ilra6xnq5ftx32721ii1or/ifdx9jprifkl2ldfzmn2m18n91wg8mim.jpg" alt="iPhone 17 Pro">
+                    <img src="img/iphone_17_pro_max_.webp" alt="iPhone 17 Pro" loading="lazy">
                     <div class="product-info">
                         <h3>iPhone 17 Pro</h3>
                         <div class="rating">★★★★★ 4.9/5</div>
                         <div class="price">159 990 ₽</div>
                         <p class="product-desc">Профессиональный флагман с революционным чипом A19 Pro</p>
-                        <button class="btn btn-secondary add-to-cart" data-product='{"id":"iphone17pro","name":"iPhone 17 Pro","price":"159 990 ₽","image":"https://twigo.ru/center/iblock/5f9/6m2fcxghq6ilra6xnq5ftx32721ii1or/ifdx9jprifkl2ldfzmn2m18n91wg8mim.jpg"}'>В корзину</button>
+                        <button class="btn btn-secondary add-to-cart" data-product='{"id":"iphone17pro","name":"iPhone 17 Pro","price":"159 990 ₽","image":"img/iphone_17_pro_max_.webp"}'>В корзину</button>
                     </div>
                 </div>
                 <div class="product-card">
-                    <img src="https://tatphone.ru/wp-content/uploads/2025/06/13367471-8.jpg" alt="iPhone 16">
+                    <img src="img/MacBook_ProM5.jpg" alt="MacBook Pro 16" loading="lazy">
                     <div class="product-info">
-                        <h3>iPhone 16</h3>
-                        <div class="rating">★★★★☆ 4.8/5</div>
-                        <div class="price">99 990 ₽</div>
-                        <p class="product-desc">Доступный флагман с динамическим островом 2.0</p>
-                        <button class="btn btn-secondary add-to-cart" data-product='{"id":"iphone16","name":"iPhone 16","price":"99 990 ₽","image":"https://tatphone.ru/wp-content/uploads/2025/06/13367471-8.jpg"}'>В корзину</button>
+                        <h3>MacBook Pro M5"</h3>
+                        <div class="rating">★★★★★ 4.9/5</div>
+                        <div class="price">279 990 ₽</div>
+                        <p class="product-desc">Мощнейший ноутбук для профессионалов</p>
+                        <button class="btn btn-secondary add-to-cart" data-product='{"id":"macbookprom5","name":"MacBook Pro M5","price":"279 990 ₽","image":"img/MacBook_ProM5.jpg"}'>В корзину</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="img/AirPods_Pro_2.jpg" alt="AirPods Pro 2" loading="lazy">
+                    <div class="product-info">
+                        <h3>AirPods Pro 2</h3>
+                        <div class="rating">★★★★★ 4.9/5</div>
+                        <div class="price">24 990 ₽</div>
+                        <p class="product-desc">Лучшие наушники с активным шумоподавлением</p>
+                        <button class="btn btn-secondary add-to-cart" data-product='{"id":"airpodspro2","name":"AirPods Pro 2","price":"24 990 ₽","image":"img/AirPods_Pro_2.jpg"}'>В корзину</button>
                     </div>
                 </div>
             </div>
             <div class="text-center">
-                <a href="catalog.html" class="btn btn-outline">Смотреть все модели</a>
+                <a href="categories.html" class="btn btn-outline">Смотреть все модели</a>
             </div>
         </div>
     </section>
@@ -216,7 +221,7 @@
                     <h4>Меню</h4>
                     <ul>
                         <li><a href="index.html">Главная</a></li>
-                        <li><a href="catalog.html">Каталог</a></li>
+                        <li><a href="categories.html">Каталог</a></li>
                         <li><a href="contacts.html">Контакты</a></li>
                     </ul>
                 </div>

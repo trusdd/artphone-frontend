@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mac - ArtPhone</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="header">
+      <nav class="main-nav">
+        <div class="nav-container">
+          <a href="index.html" class="logo">ArtPhone</a>
+          <button class="burger-menu" id="burgerMenu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          <ul class="nav-menu">
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="categories.html">Каталог</a></li>
+            <li><a href="contacts.html">Контакты</a></li>
+            <li><a href="login.html" id="loginLink">Вход</a></li>
+            <li><a href="profile.html" id="profileLink" style="display: none;">Личный кабинет</a></li>
+          </ul>
+          <div class="search-container">
+            <input type="text" id="searchInput" class="search-input" placeholder="Поиск Mac..." />
+            <div id="searchResults" class="search-results"></div>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <div class="catalog-page">
+      <h1>Mac</h1>
+      
+      <div class="breadcrumbs">
+        <a href="index.html">Главная</a> / <a href="categories.html">Каталог</a> / <span>Mac</span>
+      </div>
+      
+      <div class="catalog-controls">
+        <button class="filter-toggle" id="filterToggle">⚙️ Фильтры</button>
+        
+        <div class="filters" id="filters">
+          <div class="filters-header">
+            <h3>Фильтры</h3>
+            <button class="close-filters" id="closeFilters">✕</button>
+          </div>
+          
+          <div class="filter-group">
+            <label>Цена</label>
+            <div class="price-range">
+              <input type="range" id="priceFilter" min="0" max="300000" value="300000" step="1000">
+              <div class="price-values">
+                <span>0 ₽</span>
+                <span id="priceValue">300 000 ₽</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="filter-group">
+            <label>Модель</label>
+            <select id="modelFilter">
+              <option value="">Все модели</option>
+              <option value="MacBook Pro 16">MacBook Pro 16"</option>
+              <option value="MacBook Pro 14">MacBook Pro 14"</option>
+              <option value="MacBook Air 15">MacBook Air 15"</option>
+              <option value="MacBook Air 13">MacBook Air 13"</option>
+              <option value="iMac 24">iMac 24"</option>
+              <option value="Mac mini">Mac mini</option>
+            </select>
+          </div>
+          
+          <div class="filter-group">
+            <label>Память</label>
+            <select id="storageFilter">
+              <option value="">Вся</option>
+              <option value="256">256 ГБ</option>
+              <option value="512">512 ГБ</option>
+              <option value="1024">1 ТБ</option>
+            </select>
+          </div>
+          
+          <div class="filter-group">
+            <label>Рейтинг</label>
+            <select id="ratingFilter">
+              <option value="">Любой</option>
+              <option value="4.5">от 4.5 ★</option>
+              <option value="4.7">от 4.7 ★</option>
+              <option value="4.8">от 4.8 ★</option>
+              <option value="4.9">от 4.9 ★</option>
+            </select>
+          </div>
+          
+          <div class="filter-actions">
+            <button class="btn btn-primary" id="applyFilters">Применить</button>
+            <button class="btn btn-outline" id="resetFilters">Сбросить</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="catalog-grid" id="catalogGrid"></div>
+      
+      <div class="back-to-categories">
+        <a href="categories.html" class="btn btn-outline">← Вернуться к категориям</a>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-info">
+            <h3>ArtPhone</h3>
+            <p>Официальный магазин iPhone в России</p>
+            <p>г. Москва, ул. Тверская, д. 25</p>
+          </div>
+          <div class="footer-links">
+            <h4>Меню</h4>
+            <ul>
+              <li><a href="index.html">Главная</a></li>
+              <li><a href="categories.html">Каталог</a></li>
+              <li><a href="contacts.html">Контакты</a></li>
+            </ul>
+          </div>
+          <div class="footer-contact">
+            <h4>Контакты</h4>
+            <p>+7 (495) 123-45-67</p>
+            <p>info@artphone.ru</p>
+            <p>Пн-Вс: 10:00 - 21:00</p>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2023 Магазин iPhone "ArtPhone". Все права защищены</p>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const filterToggle = document.getElementById('filterToggle');
+        const filters = document.getElementById('filters');
+        const closeFilters = document.getElementById('closeFilters');
+        const priceFilter = document.getElementById('priceFilter');
+        const priceValue = document.getElementById('priceValue');
+        const modelFilter = document.getElementById('modelFilter');
+        const storageFilter = document.getElementById('storageFilter');
+        const ratingFilter = document.getElementById('ratingFilter');
+        const applyFilters = document.getElementById('applyFilters');
+        const resetFilters = document.getElementById('resetFilters');
+        const catalogGrid = document.getElementById('catalogGrid');
+        
+        const macProducts = window.catalogProducts.filter(p => p.category === 'mac');
+        const wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
+        
+        function renderProducts(products) {
+          catalogGrid.innerHTML = products.map(product => `
+            <div class="catalog-item" data-id="${product.id}" data-price="${product.priceNum}" data-rating="${product.rating}" data-storage="${product.storage || 0}">
+              <a href="${product.link}">
+                <img src="${product.image}" alt="${product.name}" loading="lazy">
+                <h3>${product.name}</h3>
+                <p>${product.price}</p>
+                <div class="rating">${'★'.repeat(Math.floor(product.rating))}${product.rating % 1 ? '½' : ''} ${product.rating}/5</div>
+                ${product.storage ? `<div class="storage">${product.storage} ГБ</div>` : ''}
+              </a>
+              <div class="product-actions">
+                <button class="btn btn-secondary add-to-cart" data-product='${JSON.stringify(product).replace(/'/g, "&apos;")}'>
+                  В корзину
+                </button>
+                <button class="wishlist-btn ${wishlist.includes(product.id) ? 'active' : ''}" data-product-id="${product.id}">
+                  ❤️
+                </button>
+              </div>
+            </div>
+          `).join('');
+        }
+        
+        renderProducts(macProducts);
+        
+        if (filterToggle && filters) {
+          filterToggle.addEventListener('click', () => {
+            filters.classList.add('active');
+          });
+        }
+        
+        if (closeFilters && filters) {
+          closeFilters.addEventListener('click', () => {
+            filters.classList.remove('active');
+          });
+        }
+        
+        if (priceFilter && priceValue) {
+          priceFilter.addEventListener('input', function() {
+            priceValue.textContent = Number(this.value).toLocaleString() + ' ₽';
+          });
+        }
+        
+        if (applyFilters) {
+          applyFilters.addEventListener('click', () => {
+            const maxPrice = parseInt(priceFilter?.value || 300000);
+            const model = modelFilter?.value || '';
+            const storage = storageFilter?.value || '';
+            const minRating = parseFloat(ratingFilter?.value || 0);
+            
+            let filtered = macProducts.filter(product => {
+              if (product.priceNum > maxPrice) return false;
+              if (model && !product.name.includes(model)) return false;
+              if (storage && product.storage != storage) return false;
+              if (minRating && product.rating < minRating) return false;
+              return true;
+            });
+            
+            renderProducts(filtered);
+            
+            if (window.innerWidth <= 768) {
+              filters.classList.remove('active');
+            }
+          });
+        }
+        
+        if (resetFilters) {
+          resetFilters.addEventListener('click', () => {
+            if (priceFilter) {
+              priceFilter.value = '300000';
+              priceValue.textContent = '300 000 ₽';
+            }
+            if (modelFilter) modelFilter.value = '';
+            if (storageFilter) storageFilter.value = '';
+            if (ratingFilter) ratingFilter.value = '';
+            
+            renderProducts(macProducts);
+          });
+        }
+      });
+    </script>
+  </body>
+</html>
