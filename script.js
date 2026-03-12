@@ -18,25 +18,21 @@ document.addEventListener('DOMContentLoaded', function() {
         { id: 'iphone14pro', name: 'iPhone 14 Pro', price: '99 990 ₽', priceNum: 99990, category: 'iphone', image: 'img/iPhone_14_Pro_Max.jpg', link: 'product-iphone14pro.html', rating: 4.8, storage: 256 },
         { id: 'iphone14', name: 'iPhone 14', price: '69 990 ₽', priceNum: 69990, category: 'iphone', image: 'img/iPhone_14.jpg', link: 'product-iphone14.html', rating: 4.6, storage: 128 },
         { id: 'iphonese', name: 'iPhone SE', price: '59 990 ₽', priceNum: 59990, category: 'iphone', image: 'https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-se-white-select-202203?wid=5120&hei=2880&fmt=p-jpg', link: 'product-iphonese.html', rating: 4.6, storage: 64 },
-        
-        { id: 'macbookneo', name: 'MacBook Neo', price: '69 990 ₽', priceNum: 69990, category: 'mac', image: 'img/MacBook_Neo.jpg', link: 'product-macbookneo.html', rating: 4.5, storage: 256 },,
+        { id: 'macbookneo', name: 'MacBook Neo', price: '69 990 ₽', priceNum: 69990, category: 'mac', image: 'img/MacBook_Neo.jpg', link: 'product-macbookneo.html', rating: 4.5, storage: 256 },
         { id: 'macbookprom5', name: 'MacBook Pro M5', price: '279 990 ₽', priceNum: 279990, category: 'mac', image: 'img/MacBook_ProM5.jpg', link: 'product-macbookprom5.html', rating: 5.0, storage: 1024 },
         { id: 'macbookprom4', name: 'MacBook Pro M4', price: '229 990 ₽', priceNum: 229990, category: 'mac', image: 'img/MacBookPro_M4.jpg', link: 'product-macbookprom4.html', rating: 4.9, storage: 512 },
         { id: 'macbookprom3', name: 'MacBook Pro M3', price: '199 990 ₽', priceNum: 199990, category: 'mac', image: 'img/MacBookPro_M4.jpg', link: 'product-macbookprom3.html', rating: 4.9, storage: 512 },
         { id: 'macbookairm4', name: 'MacBook Air M4', price: '169 990 ₽', priceNum: 169990, category: 'mac', image: 'img/MacBook_Air_M4.jpg', link: 'product-macbookairm4.html', rating: 4.9, storage: 512 },
         { id: 'macbookairm3', name: 'MacBook Air M3', price: '149 990 ₽', priceNum: 149990, category: 'mac', image: 'img/MacBook_Air_M3.webp', link: 'product-macbookairm3.html', rating: 4.9, storage: 256 },
         { id: 'macbookairm2', name: 'MacBook Air M2', price: '129 990 ₽', priceNum: 129990, category: 'mac', image: 'img/MacBook_Air_M2.jpeg', link: 'product-macbookairm2.html', rating: 4.8, storage: 256 },
-        
         { id: 'ipadpro', name: 'iPad Pro', price: '129 990 ₽', priceNum: 129990, category: 'ipad', image: 'img/iPad_Pro.jpg', link: 'product-ipadpro.html', rating: 4.9, storage: 256 },
         { id: 'ipadair', name: 'iPad Air', price: '79 990 ₽', priceNum: 79990, category: 'ipad', image: 'img/iPad_Air.jpg', link: 'product-ipadair.html', rating: 4.8, storage: 128 },
         { id: 'ipad11', name: 'iPad 11', price: '49 990 ₽', priceNum: 49990, category: 'ipad', image: 'img/iPad_11webp.webp', link: 'product-ipad11.html', rating: 4.7, storage: 64 },
-        
         { id: 'airpodspro3', name: 'AirPods Pro 3', price: '29 990 ₽', priceNum: 29990, category: 'airpods', image: 'img/AirPods_Pro_3.jpg', link: 'product-airpodspro3.html', rating: 4.9 },
         { id: 'airpodspro2', name: 'AirPods Pro 2', price: '24 990 ₽', priceNum: 24990, category: 'airpods', image: 'img/AirPods_Pro_2.jpg', link: 'product-airpodspro2.html', rating: 4.9 },
         { id: 'airpodspro', name: 'AirPods Pro', price: '24 990 ₽', priceNum: 24990, category: 'airpods', image: 'img/AirPods_Pro.jpg', link: 'product-airpodspro.html', rating: 4.8 },
         { id: 'airpods3', name: 'AirPods 3', price: '17 990 ₽', priceNum: 17990, category: 'airpods', image: 'img/Airpods_3.jpg', link: 'product-airpods3.html', rating: 4.7 },
         { id: 'airpods2', name: 'AirPods 2', price: '12 990 ₽', priceNum: 12990, category: 'airpods', image: 'https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/airpods-2nd-gen-hero-select-202209?wid=5120&hei=2880&fmt=p-jpg', link: 'product-airpods2.html', rating: 4.6 },
-        
         { id: 'watchultra3', name: 'Apple Watch Ultra 3', price: '89 990 ₽', priceNum: 89990, category: 'watch', image: 'img/AppleWatch_Ultra_3.jpg', link: 'product-watchultra3.html', rating: 5.0 },
         { id: 'watchultra2', name: 'Apple Watch Ultra 2', price: '79 990 ₽', priceNum: 79990, category: 'watch', image: 'img/AppleWatch_Ultra_2.jpg', link: 'product-watchultra2.html', rating: 4.9 },
         { id: 'watchseries11', name: 'Apple Watch Series 11', price: '54 990 ₽', priceNum: 54990, category: 'watch', image: 'img/AppleWatch_S11.jpg', link: 'product-watchseries11.html', rating: 4.9 },
@@ -370,17 +366,145 @@ document.addEventListener('DOMContentLoaded', function() {
 
 class ShoppingCart {
     constructor() {
-        this.items = JSON.parse(localStorage.getItem('cart')) || [];
+        this.items = [];
         this.init();
     }
     
-    init() {
+    async init() {
+        await this.loadCartFromServer();
         this.createCartIcon();
         this.updateCartCount();
         this.bindEvents();
         
         if (window.location.pathname.includes('cart.html')) {
             this.renderCartPage();
+        }
+    }
+    
+    async loadCartFromServer() {
+        if (!window.userAuth || !window.userAuth.token) {
+            this.items = [];
+            return;
+        }
+        
+        try {
+            const response = await fetch(`${window.userAuth.API_URL}/cart`, {
+                headers: {
+                    'Authorization': `Bearer ${window.userAuth.token}`
+                }
+            });
+            
+            if (response.ok) {
+                const data = await response.json();
+                this.items = data.items || [];
+            } else {
+                this.items = [];
+            }
+        } catch (error) {
+            console.error('Error loading cart:', error);
+            this.items = [];
+        }
+    }
+    
+    async addItem(product) {
+        if (!window.userAuth || !window.userAuth.token) {
+            showNotification('Для добавления в корзину нужно войти', 'error');
+            window.location.href = 'login.html';
+            return;
+        }
+        
+        try {
+            const response = await fetch(`${window.userAuth.API_URL}/cart/add`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': `Bearer ${window.userAuth.token}`
+                },
+                body: JSON.stringify({
+                    product_id: product.id,
+                    product_name: product.name,
+                    product_price: product.price,
+                    product_image: product.image,
+                    quantity: 1
+                })
+            });
+            
+            if (response.ok) {
+                const data = await response.json();
+                this.items = data.items;
+                this.updateCartCount();
+                this.updateCartPreview();
+                showNotification(`${product.name} добавлен в корзину`);
+                
+                if (window.location.pathname.includes('cart.html')) {
+                    this.renderCartPage();
+                }
+            } else {
+                showNotification('Ошибка при добавлении', 'error');
+            }
+        } catch (error) {
+            console.error('Add to cart error:', error);
+            showNotification('Ошибка сервера', 'error');
+        }
+    }
+    
+    async removeItem(productId) {
+        try {
+            const response = await fetch(`${window.userAuth.API_URL}/cart/remove/${productId}`, {
+                method: 'DELETE',
+                headers: {
+                    'Authorization': `Bearer ${window.userAuth.token}`
+                }
+            });
+            
+            if (response.ok) {
+                const data = await response.json();
+                this.items = data.items;
+                this.updateCartCount();
+                this.updateCartPreview();
+                
+                if (window.location.pathname.includes('cart.html')) {
+                    this.renderCartPage();
+                }
+            }
+        } catch (error) {
+            console.error('Remove error:', error);
+        }
+    }
+    
+    async updateQuantity(productId, change) {
+        const item = this.items.find(item => item.product_id === productId);
+        if (!item) return;
+        
+        const newQuantity = item.quantity + change;
+        
+        if (newQuantity <= 0) {
+            await this.removeItem(productId);
+            return;
+        }
+        
+        try {
+            const response = await fetch(`${window.userAuth.API_URL}/cart/update/${productId}`, {
+                method: 'PUT',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': `Bearer ${window.userAuth.token}`
+                },
+                body: JSON.stringify({ quantity: newQuantity })
+            });
+            
+            if (response.ok) {
+                const data = await response.json();
+                this.items = data.items;
+                this.updateCartCount();
+                this.updateCartPreview();
+                
+                if (window.location.pathname.includes('cart.html')) {
+                    this.renderCartPage();
+                }
+            }
+        } catch (error) {
+            console.error('Update error:', error);
         }
     }
     
@@ -410,54 +534,6 @@ class ShoppingCart {
         if (cartCount) cartCount.textContent = count;
     }
     
-    addItem(product) {
-        const existing = this.items.find(item => item.id === product.id);
-        if (existing) {
-            existing.quantity += 1;
-        } else {
-            this.items.push({ ...product, quantity: 1 });
-        }
-        this.saveCart();
-        this.updateCartPreview();
-        showNotification(`${product.name} добавлен в корзину`);
-        
-        if (window.location.pathname.includes('cart.html')) {
-            this.renderCartPage();
-        }
-    }
-    
-    removeItem(productId) {
-        this.items = this.items.filter(item => item.id !== productId);
-        this.saveCart();
-        this.updateCartPreview();
-        
-        if (window.location.pathname.includes('cart.html')) {
-            this.renderCartPage();
-        }
-    }
-    
-    updateQuantity(productId, change) {
-        const item = this.items.find(item => item.id === productId);
-        if (item) {
-            item.quantity += change;
-            if (item.quantity <= 0) {
-                this.removeItem(productId);
-            } else {
-                this.saveCart();
-                this.updateCartPreview();
-                
-                if (window.location.pathname.includes('cart.html')) {
-                    this.renderCartPage();
-                }
-            }
-        }
-    }
-    
-    saveCart() {
-        localStorage.setItem('cart', JSON.stringify(this.items));
-        this.updateCartCount();
-    }
-    
     updateCartPreview() {
         const preview = document.querySelector('.cart-preview');
         if (!preview) return;
@@ -469,16 +545,16 @@ class ShoppingCart {
         
         let total = 0;
         preview.innerHTML = this.items.slice(0, 3).map(item => {
-            const itemTotal = parseInt(item.price.replace(/\D/g, '')) * item.quantity;
+            const itemTotal = parseInt(item.product_price.replace(/\D/g, '')) * item.quantity;
             total += itemTotal;
             return `
-                <div class="cart-item" data-id="${item.id}">
-                    <img src="${item.image}" alt="${item.name}" loading="lazy">
+                <div class="cart-item" data-id="${item.product_id}">
+                    <img src="${item.product_image}" alt="${item.product_name}" loading="lazy">
                     <div class="cart-item-info">
-                        <h4>${item.name}</h4>
-                        <div class="cart-item-price">${item.price} x ${item.quantity}</div>
+                        <h4>${item.product_name}</h4>
+                        <div class="cart-item-price">${item.product_price} x ${item.quantity}</div>
                     </div>
-                    <button class="cart-item-remove" onclick="cart.removeItem('${item.id}')">×</button>
+                    <button class="cart-item-remove" onclick="cart.removeItem('${item.product_id}')">×</button>
                 </div>
             `;
         }).join('');
@@ -500,7 +576,7 @@ class ShoppingCart {
         }
     }
     
-    renderCartPage() {
+    async renderCartPage() {
         const cartItemsList = document.getElementById('cartItemsList');
         const emptyCart = document.getElementById('emptyCart');
         const cartContent = document.querySelector('.cart-content');
@@ -522,25 +598,25 @@ class ShoppingCart {
         let totalSum = 0;
         
         cartItemsList.innerHTML = this.items.map(item => {
-            const price = parseInt(item.price.replace(/\D/g, ''));
+            const price = parseInt(item.product_price.replace(/\D/g, ''));
             const itemTotal = price * item.quantity;
             totalItems += item.quantity;
             totalSum += itemTotal;
             
             return `
-                <div class="cart-item-row" data-id="${item.id}">
+                <div class="cart-item-row" data-id="${item.product_id}">
                     <div class="cart-item-product">
-                        <img src="${item.image}" alt="${item.name}" loading="lazy">
-                        <h4>${item.name}</h4>
+                        <img src="${item.product_image}" alt="${item.product_name}" loading="lazy">
+                        <h4>${item.product_name}</h4>
                     </div>
-                    <div class="cart-item-price">${item.price}</div>
+                    <div class="cart-item-price">${item.product_price}</div>
                     <div class="cart-item-quantity">
-                        <button class="quantity-btn" onclick="cart.updateQuantity('${item.id}', -1)">-</button>
+                        <button class="quantity-btn" onclick="cart.updateQuantity('${item.product_id}', -1)">-</button>
                         <span class="quantity-value">${item.quantity}</span>
-                        <button class="quantity-btn" onclick="cart.updateQuantity('${item.id}', 1)">+</button>
+                        <button class="quantity-btn" onclick="cart.updateQuantity('${item.product_id}', 1)">+</button>
                     </div>
                     <div class="cart-item-total">${itemTotal.toLocaleString()} ₽</div>
-                    <button class="cart-item-remove-btn" onclick="cart.removeItem('${item.id}')">×</button>
+                    <button class="cart-item-remove-btn" onclick="cart.removeItem('${item.product_id}')">×</button>
                 </div>
             `;
         }).join('');
@@ -567,12 +643,33 @@ class ShoppingCart {
         
         const checkoutBtn = document.getElementById('checkoutBtn');
         if (checkoutBtn) {
-            checkoutBtn.addEventListener('click', () => {
-                alert('Спасибо за заказ! В ближайшее время с вами свяжется менеджер.');
-                this.items = [];
-                this.saveCart();
-                this.renderCartPage();
-                this.updateCartPreview();
+            checkoutBtn.addEventListener('click', async () => {
+                if (!window.userAuth || !window.userAuth.token) {
+                    showNotification('Для оформления заказа нужно войти', 'error');
+                    return;
+                }
+                
+                try {
+                    const response = await fetch(`${window.userAuth.API_URL}/orders/create`, {
+                        method: 'POST',
+                        headers: {
+                            'Authorization': `Bearer ${window.userAuth.token}`
+                        }
+                    });
+                    
+                    if (response.ok) {
+                        alert('Спасибо за заказ! В ближайшее время с вами свяжется менеджер.');
+                        this.items = [];
+                        this.updateCartCount();
+                        this.updateCartPreview();
+                        this.renderCartPage();
+                    } else {
+                        showNotification('Ошибка при оформлении заказа', 'error');
+                    }
+                } catch (error) {
+                    console.error('Checkout error:', error);
+                    showNotification('Ошибка сервера', 'error');
+                }
             });
         }
     }
@@ -679,6 +776,12 @@ class UserAuth {
                     window.location.href = 'profile.html';
                 }, 1000);
                 
+                if (window.cart) {
+                    await window.cart.loadCartFromServer();
+                    window.cart.updateCartCount();
+                    window.cart.updateCartPreview();
+                }
+                
                 return true;
             } else {
                 showNotification(data.error || 'Неверный email или пароль', 'error');
@@ -698,6 +801,12 @@ class UserAuth {
         localStorage.removeItem('currentUser');
         this.updateUI();
         showNotification('Вы вышли из аккаунта');
+        
+        if (window.cart) {
+            window.cart.items = [];
+            window.cart.updateCartCount();
+            window.cart.updateCartPreview();
+        }
         
         if (window.location.pathname.includes('profile.html')) {
             setTimeout(() => {
