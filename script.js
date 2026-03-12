@@ -266,42 +266,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
     
-    function showNotification(message, type = 'success', duration = 3000) {
-        const container = document.getElementById('notificationContainer') || (() => {
-            const div = document.createElement('div');
-            div.id = 'notificationContainer';
-            div.style.cssText = 'position: fixed; top: 20px; right: 20px; z-index: 9999;';
-            document.body.appendChild(div);
-            return div;
-        })();
-        
-        const notification = document.createElement('div');
-        notification.textContent = message;
-        notification.style.cssText = `
-            background: ${type === 'success' ? '#34c759' : '#ff3b30'};
-            color: white;
-            padding: 15px 25px;
-            border-radius: 30px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-            margin-bottom: 10px;
-            animation: slideInRight 0.3s ease;
-            font-weight: 500;
-            cursor: pointer;
-        `;
-        
-        notification.addEventListener('click', () => {
-            notification.style.animation = 'slideOutRight 0.3s ease';
-            setTimeout(() => notification.remove(), 300);
-        });
-        
-        container.appendChild(notification);
-        
-        setTimeout(() => {
-            notification.style.animation = 'slideOutRight 0.3s ease';
-            setTimeout(() => notification.remove(), 300);
-        }, duration);
-    }
-    
     const scrollTopButton = document.createElement('button');
     scrollTopButton.className = 'scroll-top';
     scrollTopButton.innerHTML = '↑';
@@ -735,9 +699,13 @@ class UserAuth {
                 this.updateUI();
                 showNotification('Регистрация успешна!');
                 
-                setTimeout(() => {
-                    window.location.href = 'profile.html';
-                }, 1000);
+                if (window.cart) {
+                    await window.cart.loadCartFromServer();
+                    window.cart.updateCartCount();
+                    window.cart.updateCartPreview();
+                }
+                
+                window.location.href = 'profile.html';
                 
                 return true;
             } else {
@@ -772,15 +740,13 @@ class UserAuth {
                 this.updateUI();
                 showNotification(`Добро пожаловать, ${data.user.name}!`);
                 
-                setTimeout(() => {
-                    window.location.href = 'profile.html';
-                }, 1000);
-                
                 if (window.cart) {
                     await window.cart.loadCartFromServer();
                     window.cart.updateCartCount();
                     window.cart.updateCartPreview();
                 }
+                
+                window.location.href = 'profile.html';
                 
                 return true;
             } else {
@@ -933,6 +899,42 @@ class UserAuth {
             });
         });
     }
+}
+
+function showNotification(message, type = 'success', duration = 3000) {
+    const container = document.getElementById('notificationContainer') || (() => {
+        const div = document.createElement('div');
+        div.id = 'notificationContainer';
+        div.style.cssText = 'position: fixed; top: 20px; right: 20px; z-index: 9999;';
+        document.body.appendChild(div);
+        return div;
+    })();
+    
+    const notification = document.createElement('div');
+    notification.textContent = message;
+    notification.style.cssText = `
+        background: ${type === 'success' ? '#34c759' : '#ff3b30'};
+        color: white;
+        padding: 15px 25px;
+        border-radius: 30px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        margin-bottom: 10px;
+        animation: slideInRight 0.3s ease;
+        font-weight: 500;
+        cursor: pointer;
+    `;
+    
+    notification.addEventListener('click', () => {
+        notification.style.animation = 'slideOutRight 0.3s ease';
+        setTimeout(() => notification.remove(), 300);
+    });
+    
+    container.appendChild(notification);
+    
+    setTimeout(() => {
+        notification.style.animation = 'slideOutRight 0.3s ease';
+        setTimeout(() => notification.remove(), 300);
+    }, duration);
 }
 
 const style = document.createElement('style');
