@@ -152,9 +152,6 @@
                 <button class="btn btn-secondary add-to-cart" data-product='${JSON.stringify(product).replace(/'/g, "&apos;")}'>
                   В корзину
                 </button>
-                <button class="wishlist-btn ${wishlist.includes(product.id) ? 'active' : ''}" data-product-id="${product.id}">
-                  ❤️
-                </button>
               </div>
             </div>
           `).join('');

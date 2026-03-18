@@ -28,6 +28,7 @@ document.addEventListener('DOMContentLoaded', function() {
         { id: 'ipadpro', name: 'iPad Pro', price: '129 990 ₽', priceNum: 129990, category: 'ipad', image: 'img/iPad_Pro.jpg', link: 'product-ipadpro.html', rating: 4.9, storage: 256 },
         { id: 'ipadair', name: 'iPad Air', price: '79 990 ₽', priceNum: 79990, category: 'ipad', image: 'img/iPad_Air.jpg', link: 'product-ipadair.html', rating: 4.8, storage: 128 },
         { id: 'ipad11', name: 'iPad 11', price: '49 990 ₽', priceNum: 49990, category: 'ipad', image: 'img/iPad_11webp.webp', link: 'product-ipad11.html', rating: 4.7, storage: 64 },
+        { id: 'airpodsmax', name: 'AirPods Max', price: '62 990 ₽', priceNum: 62990, category: 'airpods', image: 'img/AirPods-Max.jpg', link: 'product-airpodsmax.html', rating: 4.8 },
         { id: 'airpodspro3', name: 'AirPods Pro 3', price: '29 990 ₽', priceNum: 29990, category: 'airpods', image: 'img/AirPods_Pro_3.jpg', link: 'product-airpodspro3.html', rating: 4.9 },
         { id: 'airpodspro2', name: 'AirPods Pro 2', price: '24 990 ₽', priceNum: 24990, category: 'airpods', image: 'img/AirPods_Pro_2.jpg', link: 'product-airpodspro2.html', rating: 4.9 },
         { id: 'airpodspro', name: 'AirPods Pro', price: '24 990 ₽', priceNum: 24990, category: 'airpods', image: 'img/AirPods_Pro.jpg', link: 'product-airpodspro.html', rating: 4.8 },
