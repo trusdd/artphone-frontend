@@ -5,42 +5,39 @@ document.addEventListener('DOMContentLoaded', function() {
     const navMenu = document.querySelector('.nav-menu');
     
     window.catalogProducts = [
-        { id: 'iphone17promax', name: 'iPhone 17 Pro Max', price: '179 990 ₽', priceNum: 179990, category: 'iphone', image: 'img/iphone_17_pro_max_.webp', link: 'product-iphone17promax.html', rating: 4.9, storage: 512 },
-        { id: 'iphone17pro', name: 'iPhone 17 Pro', price: '159 990 ₽', priceNum: 159990, category: 'iphone', image: 'img/iphone_17_pro_max_.webp', link: 'product-iphone17pro.html', rating: 4.9, storage: 512 },
-        { id: 'iphone17', name: 'iPhone 17', price: '129 990 ₽', priceNum: 129990, category: 'iphone', image: 'img/iPhone17.webp', link: 'product-iphone17.html', rating: 4.9, storage: 256 },
-        { id: 'iphone16promax', name: 'iPhone 16 Pro Max', price: '149 990 ₽', priceNum: 149990, category: 'iphone', image: 'img/iPhone_16_Pro_Max.jpg', link: 'product-iphone16promax.html', rating: 4.9, storage: 256 },
-        { id: 'iphone16pro', name: 'iPhone 16 Pro', price: '139 990 ₽', priceNum: 139990, category: 'iphone', image: 'img/iPhone_16_Pro_Max.jpg', link: 'product-iphone16pro.html', rating: 4.9, storage: 256 },
-        { id: 'iphone16', name: 'iPhone 16', price: '99 990 ₽', priceNum: 99990, category: 'iphone', image: 'img/iPhone-16.jpg', link: 'product-iphone16.html', rating: 4.8, storage: 128 },
-        { id: 'iphone15promax', name: 'iPhone 15 Pro Max', price: '139 990 ₽', priceNum: 139990, category: 'iphone', image: 'img/iPhone_15_Pro_Max.webp', link: 'product-iphone15promax.html', rating: 4.9, storage: 256 },
-        { id: 'iphone15pro', name: 'iPhone 15 Pro', price: '119 990 ₽', priceNum: 119990, category: 'iphone', image: 'img/iPhone_15_Pro_Max.webp', link: 'product-iphone15pro.html', rating: 4.8, storage: 256 },
-        { id: 'iphone15', name: 'iPhone 15', price: '89 990 ₽', priceNum: 89990, category: 'iphone', image: 'img/iPhone_15.jpg', link: 'product-iphone15.html', rating: 4.7, storage: 128 },
-        { id: 'iphone14promax', name: 'iPhone 14 Pro Max', price: '119 990 ₽', priceNum: 119990, category: 'iphone', image: 'img/iPhone_14_Pro_Max.jpg', link: 'product-iphone14promax.html', rating: 4.9, storage: 256 },
-        { id: 'iphone14pro', name: 'iPhone 14 Pro', price: '99 990 ₽', priceNum: 99990, category: 'iphone', image: 'img/iPhone_14_Pro_Max.jpg', link: 'product-iphone14pro.html', rating: 4.8, storage: 256 },
-        { id: 'iphone14', name: 'iPhone 14', price: '69 990 ₽', priceNum: 69990, category: 'iphone', image: 'img/iPhone_14.jpg', link: 'product-iphone14.html', rating: 4.6, storage: 128 },
-        { id: 'iphonese', name: 'iPhone SE', price: '59 990 ₽', priceNum: 59990, category: 'iphone', image: 'https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-se-white-select-202203?wid=5120&hei=2880&fmt=p-jpg', link: 'product-iphonese.html', rating: 4.6, storage: 64 },
-        { id: 'macbookneo', name: 'MacBook Neo', price: '69 990 ₽', priceNum: 69990, category: 'mac', image: 'img/MacBook_Neo.jpg', link: 'product-macbookneo.html', rating: 4.5, storage: 256 },
-        { id: 'macbookprom5', name: 'MacBook Pro M5', price: '279 990 ₽', priceNum: 279990, category: 'mac', image: 'img/MacBook_ProM5.jpg', link: 'product-macbookprom5.html', rating: 5.0, storage: 1024 },
-        { id: 'macbookprom4', name: 'MacBook Pro M4', price: '229 990 ₽', priceNum: 229990, category: 'mac', image: 'img/MacBookPro_M4.jpg', link: 'product-macbookprom4.html', rating: 4.9, storage: 512 },
-        { id: 'macbookprom3', name: 'MacBook Pro M3', price: '199 990 ₽', priceNum: 199990, category: 'mac', image: 'img/MacBookPro_M4.jpg', link: 'product-macbookprom3.html', rating: 4.9, storage: 512 },
-        { id: 'macbookairm4', name: 'MacBook Air M4', price: '169 990 ₽', priceNum: 169990, category: 'mac', image: 'img/MacBook_Air_M4.jpg', link: 'product-macbookairm4.html', rating: 4.9, storage: 512 },
-        { id: 'macbookairm3', name: 'MacBook Air M3', price: '149 990 ₽', priceNum: 149990, category: 'mac', image: 'img/MacBook_Air_M3.webp', link: 'product-macbookairm3.html', rating: 4.9, storage: 256 },
-        { id: 'macbookairm2', name: 'MacBook Air M2', price: '129 990 ₽', priceNum: 129990, category: 'mac', image: 'img/MacBook_Air_M2.jpeg', link: 'product-macbookairm2.html', rating: 4.8, storage: 256 },
-        { id: 'ipadpro', name: 'iPad Pro', price: '129 990 ₽', priceNum: 129990, category: 'ipad', image: 'img/iPad_Pro.jpg', link: 'product-ipadpro.html', rating: 4.9, storage: 256 },
-        { id: 'ipadair', name: 'iPad Air', price: '79 990 ₽', priceNum: 79990, category: 'ipad', image: 'img/iPad_Air.jpg', link: 'product-ipadair.html', rating: 4.8, storage: 128 },
-        { id: 'ipad11', name: 'iPad 11', price: '49 990 ₽', priceNum: 49990, category: 'ipad', image: 'img/iPad_11webp.webp', link: 'product-ipad11.html', rating: 4.7, storage: 64 },
-        { id: 'airpodsmax', name: 'AirPods Max', price: '62 990 ₽', priceNum: 62990, category: 'airpods', image: 'img/AirPods-Max.jpg', link: 'product-airpodsmax.html', rating: 4.8 },
-        { id: 'airpodspro3', name: 'AirPods Pro 3', price: '29 990 ₽', priceNum: 29990, category: 'airpods', image: 'img/AirPods_Pro_3.jpg', link: 'product-airpodspro3.html', rating: 4.9 },
-        { id: 'airpodspro2', name: 'AirPods Pro 2', price: '24 990 ₽', priceNum: 24990, category: 'airpods', image: 'img/AirPods_Pro_2.jpg', link: 'product-airpodspro2.html', rating: 4.9 },
-        { id: 'airpodspro', name: 'AirPods Pro', price: '24 990 ₽', priceNum: 24990, category: 'airpods', image: 'img/AirPods_Pro.jpg', link: 'product-airpodspro.html', rating: 4.8 },
-        { id: 'airpods3', name: 'AirPods 3', price: '17 990 ₽', priceNum: 17990, category: 'airpods', image: 'img/Airpods_3.jpg', link: 'product-airpods3.html', rating: 4.7 },
-        { id: 'airpods2', name: 'AirPods 2', price: '12 990 ₽', priceNum: 12990, category: 'airpods', image: 'https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/airpods-2nd-gen-hero-select-202209?wid=5120&hei=2880&fmt=p-jpg', link: 'product-airpods2.html', rating: 4.6 },
-        { id: 'watchultra3', name: 'Apple Watch Ultra 3', price: '89 990 ₽', priceNum: 89990, category: 'watch', image: 'img/AppleWatch_Ultra_3.jpg', link: 'product-watchultra3.html', rating: 5.0 },
-        { id: 'watchultra2', name: 'Apple Watch Ultra 2', price: '79 990 ₽', priceNum: 79990, category: 'watch', image: 'img/AppleWatch_Ultra_2.jpg', link: 'product-watchultra2.html', rating: 4.9 },
-        { id: 'watchseries11', name: 'Apple Watch Series 11', price: '54 990 ₽', priceNum: 54990, category: 'watch', image: 'img/AppleWatch_S11.jpg', link: 'product-watchseries11.html', rating: 4.9 },
-        { id: 'watchseries10', name: 'Apple Watch Series 10', price: '49 990 ₽', priceNum: 49990, category: 'watch', image: 'img/AppleWatch_S10.jpg', link: 'product-watchseries10.html', rating: 4.9 },
-        { id: 'watchseries9', name: 'Apple Watch Series 9', price: '44 990 ₽', priceNum: 44990, category: 'watch', image: 'img/AppleWatch_S9.jpg', link: 'product-watchseries9.html', rating: 4.8 },
-        { id: 'watchse', name: 'Apple Watch SE', price: '24 990 ₽', priceNum: 24990, category: 'watch', image: 'https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/apple-watch-se-hero-select-202209?wid=5120&hei=2880&fmt=p-jpg', link: 'product-watchse.html', rating: 4.7 }
-    ];
+    { id: 'iphone17pro', name: 'iPhone 17 Pro', price: '159 990 ₽', priceNum: 159990, category: 'iphone', image: 'img/iphone-17-pro.png', link: 'product-iphone17pro.html', rating: 4.9, storage: 512 },
+    { id: 'iphone17', name: 'iPhone 17', price: '129 990 ₽', priceNum: 129990, category: 'iphone', image: 'img/iphone-17.png', link: 'product-iphone17.html', rating: 4.9, storage: 256 },
+    { id: 'iphone16pro', name: 'iPhone 16 Pro', price: '139 990 ₽', priceNum: 139990, category: 'iphone', image: 'img/iphone-16-pro.png', link: 'product-iphone16pro.html', rating: 4.9, storage: 256 },
+    { id: 'iphone16', name: 'iPhone 16', price: '99 990 ₽', priceNum: 99990, category: 'iphone', image: 'img/iPhone-16.png', link: 'product-iphone16.html', rating: 4.8, storage: 128 },
+    { id: 'iphone15pro', name: 'iPhone 15 Pro', price: '119 990 ₽', priceNum: 119990, category: 'iphone', image: 'img/iphone-15-pro.png', link: 'product-iphone15pro.html', rating: 4.8, storage: 256 },
+    { id: 'iphone15', name: 'iPhone 15', price: '89 990 ₽', priceNum: 89990, category: 'iphone', image: 'img/iphone-15.png', link: 'product-iphone15.html', rating: 4.7, storage: 128 },
+    { id: 'iphone14pro', name: 'iPhone 14 Pro', price: '99 990 ₽', priceNum: 99990, category: 'iphone', image: 'img/iphone-14-pro.png', link: 'product-iphone14pro.html', rating: 4.8, storage: 256 },
+    { id: 'iphone14', name: 'iPhone 14', price: '69 990 ₽', priceNum: 69990, category: 'iphone', image: 'img/iphone-14.png', link: 'product-iphone14.html', rating: 4.6, storage: 128 },
+    
+    { id: 'macbookneo', name: 'MacBook Neo', price: '69 990 ₽', priceNum: 69990, category: 'mac', image: 'img/MacBook-Neo.png', link: 'product-macbookneo.html', rating: 4.5, storage: 256 },
+    { id: 'macbookprom5', name: 'MacBook Pro M5', price: '279 990 ₽', priceNum: 279990, category: 'mac', image: 'img/macbook-pro-m5.png', link: 'product-macbookprom5.html', rating: 5.0, storage: 1024 },
+    { id: 'macbookprom4', name: 'MacBook Pro M4', price: '229 990 ₽', priceNum: 229990, category: 'mac', image: 'img/macbook-pro-m4.png', link: 'product-macbookprom4.html', rating: 4.9, storage: 512 },
+    { id: 'macbookprom3', name: 'MacBook Pro M3', price: '199 990 ₽', priceNum: 199990, category: 'mac', image: 'img/macbook-pro-m3.png', link: 'product-macbookprom3.html', rating: 4.9, storage: 512 },
+    { id: 'macbookairm4', name: 'MacBook Air M4', price: '169 990 ₽', priceNum: 169990, category: 'mac', image: 'img/MacBook-Air-M4.png', link: 'product-macbookairm4.html', rating: 4.9, storage: 512 },
+    { id: 'macbookairm3', name: 'MacBook Air M3', price: '149 990 ₽', priceNum: 149990, category: 'mac', image: 'img/macbook-air-m3.png', link: 'product-macbookairm3.html', rating: 4.9, storage: 256 },
+    { id: 'macbookairm2', name: 'MacBook Air M2', price: '129 990 ₽', priceNum: 129990, category: 'mac', image: 'img/macbook-air-m2.png', link: 'product-macbookairm2.html', rating: 4.8, storage: 256 },
+    
+    { id: 'ipadpro', name: 'iPad Pro', price: '129 990 ₽', priceNum: 129990, category: 'ipad', image: 'img/ipad-pro.png', link: 'product-ipadpro.html', rating: 4.9, storage: 256 },
+    { id: 'ipadair', name: 'iPad Air', price: '79 990 ₽', priceNum: 79990, category: 'ipad', image: 'img/ipad-air.png', link: 'product-ipadair.html', rating: 4.8, storage: 128 },
+    { id: 'ipad10', name: 'iPad 10.9"', price: '49 990 ₽', priceNum: 49990, category: 'ipad', image: 'img/ipad-10.png', link: 'product-ipad10.html', rating: 4.7, storage: 64 },
+    
+    { id: 'airpodsmax', name: 'AirPods Max', price: '62 990 ₽', priceNum: 62990, category: 'airpods', image: 'img/AirPods-Max.png', link: 'product-airpodsmax.html', rating: 4.8 },
+    { id: 'airpodspro3', name: 'AirPods Pro 3', price: '29 990 ₽', priceNum: 29990, category: 'airpods', image: 'img/airpods-pro-3.png', link: 'product-airpodspro3.html', rating: 4.9 },
+    { id: 'airpodspro2', name: 'AirPods Pro 2', price: '24 990 ₽', priceNum: 24990, category: 'airpods', image: 'img/airpods-pro-2.png', link: 'product-airpodspro2.html', rating: 4.9 },
+    { id: 'airpodspro', name: 'AirPods Pro', price: '24 990 ₽', priceNum: 24990, category: 'airpods', image: 'img/airpods-pro.png', link: 'product-airpodspro.html', rating: 4.8 },
+    
+    { id: 'watchultra3', name: 'Apple Watch Ultra 3', price: '89 990 ₽', priceNum: 89990, category: 'watch', image: 'img/Apple-Watch-Ultra-3.png', link: 'product-watchultra3.html', rating: 5.0 },
+    { id: 'watchultra2', name: 'Apple Watch Ultra 2', price: '79 990 ₽', priceNum: 79990, category: 'watch', image: 'img/applewatch-ultra-2.png', link: 'product-watchultra2.html', rating: 4.9 },
+    { id: 'watchseries11', name: 'Apple Watch Series 11', price: '54 990 ₽', priceNum: 54990, category: 'watch', image: 'img/applewatch-s11.png', link: 'product-watchseries11.html', rating: 4.9 },
+    { id: 'watchseries10', name: 'Apple Watch Series 10', price: '49 990 ₽', priceNum: 49990, category: 'watch', image: 'img/Applewatch-S10.png', link: 'product-watchseries10.html', rating: 4.9 },
+    { id: 'watchseries9', name: 'Apple Watch Series 9', price: '44 990 ₽', priceNum: 44990, category: 'watch', image: 'img/Applewatch-S9.png', link: 'product-watchseries9.html', rating: 4.8 },
+    { id: 'watchse', name: 'Apple Watch SE', price: '24 990 ₽', priceNum: 24990, category: 'watch', image: 'img/applewatch-se.png', link: 'product-watchse.html', rating: 4.7 }
+];
     
     if (burgerMenu && navMenu) {
         burgerMenu.addEventListener('click', function() {
