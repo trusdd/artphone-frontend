@@ -1,166 +1,172 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Интернет-магазин iPhone "ArtPhone" - Контакты</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Интернет-магазин iPhone "ArtPhone" - Контакты</title>
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <div class="header">
-        <nav class="main-nav">
-            <button class="burger-menu" id="burgerMenu">
-    <span></span>
-    <span></span>
-    <span></span>
-</button>
-            <div class="nav-container">
-                <a href="index.html" class="logo">ArtPhone</a>
-              <ul class="nav-menu">
-    <li><a href="index.html">Главная</a></li>
-    <li><a href="catalog.html">Каталог</a></li>
-    <li><a href="contacts.html">Контакты</a></li>
-    <li><a href="login.html" id="loginLink">Вход</a></li>
-    <li><a href="profile.html" id="profileLink" style="display: none;">Личный кабинет</a></li>
-</ul>
-                <div class="search-container">
-                    <input type="text" id="searchInput" class="search-input" placeholder="Поиск iPhone...">
-                    <div id="searchResults" class="search-results"></div>
-                </div>
+  <div class="header">
+    <nav class="main-nav">
+      <div class="nav-container">
+        <a href="index.html" class="logo">ArtPhone</a>
+        <button class="burger-menu" id="burgerMenu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <ul class="nav-menu">
+          <li><a href="index.html">Главная</a></li>
+          <li><a href="categories.html">Каталог</a></li>
+          <li><a href="contacts.html" class="active">Контакты</a></li>
+          <li><a href="login.html" id="loginLink">Вход</a></li>
+          <li><a href="profile.html" id="profileLink" style="display: none;">Личный кабинет</a></li>
+        </ul>
+        <div class="search-container">
+          <input type="text" id="searchInput" class="search-input" placeholder="Поиск iPhone...">
+          <div id="searchResults" class="search-results"></div>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+  <header class="contacts-header">
+    <h1>Контакты магазина ArtPhone</h1>
+    <p>Мы всегда рады помочь вам с выбором и ответить на все вопросы</p>
+  </header>
+
+  <div class="contacts-container">
+    <div class="contact-content">
+      <div class="contact-form-section">
+        <h2>Напишите нам</h2>
+        <form class="contact-form" action="#" method="post">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Имя *</label>
+              <input type="text" id="name" name="name" required>
             </div>
-        </nav>
-    </div>
-
-    <header class="contacts-header">
-        <h1>Контакты магазина ArtPhone</h1>
-        <p>Мы всегда рады помочь вам с выбором и ответить на все вопросы</p>
-    </header>
-
-    <div class="contacts-container">
-        <div class="contact-content">
-            <div class="contact-form-section">
-                <h2>Напишите нам</h2>
-                <form class="contact-form" action="#" method="post">
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="name">Имя *</label>
-                            <input type="text" id="name" name="name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email *</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="phone">Телефон</label>
-                        <input type="tel" id="phone" name="phone">
-                    </div>
-                    <div class="form-group">
-                        <label for="topic">Тема сообщения *</label>
-                        <select id="topic" name="topic" required>
-                            <option value="">Выберите тему</option>
-                            <option value="order">Вопрос по заказу</option>
-                            <option value="product">Вопрос о товаре</option>
-                            <option value="delivery">Доставка</option>
-                            <option value="warranty">Гарантия</option>
-                            <option value="other">Другое</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Сообщение *</label>
-                        <textarea id="message" name="message" required></textarea>
-                    </div>
-                    <div class="checkbox-group">
-                        <input type="checkbox" id="newsletter" name="newsletter" checked>
-                        <label for="newsletter">Подписаться на рассылку новостей и акций</label>
-                    </div>
-                    <button type="submit" class="submit-button">Отправить сообщение</button>
-                </form>
+            <div class="form-group">
+              <label for="email">Email *</label>
+              <input type="email" id="email" name="email" required>
             </div>
+          </div>
+          <div class="form-group">
+            <label for="phone">Телефон</label>
+            <input type="tel" id="phone" name="phone">
+          </div>
+          <div class="form-group">
+            <label for="topic">Тема сообщения *</label>
+            <select id="topic" name="topic" required>
+              <option value="">Выберите тему</option>
+              <option value="order">Вопрос по заказу</option>
+              <option value="product">Вопрос о товаре</option>
+              <option value="delivery">Доставка</option>
+              <option value="warranty">Гарантия</option>
+              <option value="other">Другое</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Сообщение *</label>
+            <textarea id="message" name="message" required></textarea>
+          </div>
+          <div class="checkbox-group">
+            <input type="checkbox" id="newsletter" name="newsletter" checked>
+            <label for="newsletter">Подписаться на рассылку новостей и акций</label>
+          </div>
+          <button type="submit" class="submit-button">Отправить сообщение</button>
+        </form>
+      </div>
 
-            <div class="contact-info-section">
-                <div class="info-card">
-                    <h2>📍 Адрес магазина</h2>
-                    <p><strong>Адрес:</strong> г. Москва, ул. Тверская, д. 25</p>
-                    <p><strong>Метро:</strong> Тверская, Пушкинская, Чеховская</p>
-                    <p><strong>Режим работы:</strong></p>
-                    <div class="working-hours">
-                        <div class="hours-item">
-                            <span class="days">Пн-Пт</span>
-                            <span class="time">10:00 - 21:00</span>
-                        </div>
-                        <div class="hours-item">
-                            <span class="days">Сб-Вс</span>
-                            <span class="time">11:00 - 20:00</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="info-card">
-                    <h2>📞 Контактные данные</h2>
-                    <p><strong>Телефон:</strong> +7 (495) 123-45-67</p>
-                    <p><strong>Email:</strong> info@artphone.ru</p>
-                    <p><strong>Техподдержка:</strong> support@artphone.ru</p>
-                    <p><strong>Для партнеров:</strong> partners@artphone.ru</p>
-                    <div class="social-links">
-                        <a href="#" class="social-link">📱</a>
-                        <a href="#" class="social-link">📘</a>
-                        <a href="#" class="social-link">📷</a>
-                        <a href="#" class="social-link">✈️</a>
-                    </div>
-                </div>
-
-                <div class="info-card">
-                    <h2>ℹ️ Информация о магазине</h2>
-                    <p>Мы являемся официальным дилером Apple в России. Все товары поставляются с полным комплектом документов и официальной гарантией производителя.</p>
-                    <ul>
-                        <li>Профессиональная консультация</li>
-                        <li>Помощь в настройке</li>
-                        <li>Обучение работе с устройствами</li>
-                        <li>Услуги trade-in</li>
-                        <li>Кредитование и рассрочка</li>
-                    </ul>
-                </div>
+      <div class="contact-info-section">
+        <div class="info-card">
+          <h2>📍 Адрес магазина</h2>
+          <p><strong>Адрес:</strong> г. Москва, ул. Тверская, д. 25</p>
+          <p><strong>Метро:</strong> Тверская, Пушкинская, Чеховская</p>
+          <p><strong>Режим работы:</strong></p>
+          <div class="working-hours">
+            <div class="hours-item">
+              <span class="days">Пн-Пт</span>
+              <span class="time">10:00 - 21:00</span>
             </div>
+            <div class="hours-item">
+              <span class="days">Сб-Вс</span>
+              <span class="time">11:00 - 20:00</span>
+            </div>
+          </div>
         </div>
 
-        <section class="map-section">
-            <h2>Мы на карте</h2>
-            <div class="map-container">
-                <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A8e5c8f48a8b4b4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4&amp;source=constructor" width="100%" height="400" frameborder="0"></iframe>
-            </div>
-        </section>
-    </div>
-
-    <div class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-info">
-                    <h3>ArtPhone</h3>
-                    <p>Официальный магазин iPhone в России</p>
-                    <p>г. Москва, ул. Тверская, д. 25</p>
-                </div>
-                <div class="footer-links">
-                    <h4>Меню</h4>
-                    <ul>
-                        <li><a href="index.html">Главная</a></li>
-                        <li><a href="catalog.html">Каталог</a></li>
-                        <li><a href="contacts.html">Контакты</a></li>
-                    </ul>
-                </div>
-                <div class="footer-contact">
-                    <h4>Контакты</h4>
-                    <p>+7 (495) 123-45-67</p>
-                    <p>info@artphone.ru</p>
-                    <p>Пн-Вс: 10:00 - 21:00</p>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2023 Магазин iPhone "ArtPhone". Все права защищены</p>
-            </div>
+        <div class="info-card">
+          <h2>📞 Контактные данные</h2>
+          <p><strong>Телефон:</strong> +7 (495) 123-45-67</p>
+          <p><strong>Email:</strong> info@artphone.ru</p>
+          <p><strong>Техподдержка:</strong> support@artphone.ru</p>
+          <p><strong>Для партнеров:</strong> partners@artphone.ru</p>
+          <div class="social-links">
+            <a href="#" class="social-link">📱</a>
+            <a href="#" class="social-link">📘</a>
+            <a href="#" class="social-link">📷</a>
+            <a href="#" class="social-link">✈️</a>
+          </div>
         </div>
+
+        <div class="info-card">
+          <h2>ℹ️ Информация о магазине</h2>
+          <p>Мы являемся официальным дилером Apple в России. Все товары поставляются с полным комплектом документов и
+            официальной гарантией производителя.</p>
+          <ul>
+            <li>Профессиональная консультация</li>
+            <li>Помощь в настройке</li>
+            <li>Обучение работе с устройствами</li>
+            <li>Услуги trade-in</li>
+            <li>Кредитование и рассрочка</li>
+          </ul>
+        </div>
+      </div>
     </div>
 
-    <script src="script.js"></script>
+    <section class="map-section">
+      <h2>Мы на карте</h2>
+      <div class="map-container">
+        <iframe
+          src="https://yandex.ru/map-widget/v1/?um=constructor%3A8e5c8f48a8b4b4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4&amp;source=constructor"
+          width="100%" height="400" frameborder="0"></iframe>
+      </div>
+    </section>
+  </div>
+
+  <div class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-info">
+          <h3>ArtPhone</h3>
+          <p>Официальный магазин iPhone в России</p>
+          <p>г. Москва, ул. Тверская, д. 25</p>
+        </div>
+        <div class="footer-links">
+          <h4>Меню</h4>
+          <ul>
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="categories.html">Каталог</a></li>
+            <li><a href="contacts.html">Контакты</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h4>Контакты</h4>
+          <p>+7 (495) 123-45-67</p>
+          <p>info@artphone.ru</p>
+          <p>Пн-Вс: 10:00 - 21:00</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2023 Магазин iPhone "ArtPhone". Все права защищены</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
+
 </html>
